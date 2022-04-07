@@ -1,0 +1,17 @@
+h3 {
+    background-color: rebeccapurple;
+    border: 2px dotted black;
+}
+
+.produto3 {
+    color: red;
+}
+
+#aqui-descricao{
+    color: aqua;
+}
+
+div{
+    border-color: olive;
+    size: 15px;
+}
