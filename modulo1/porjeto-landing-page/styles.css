@@ -1,0 +1,27 @@
+*{
+    margin: 0;
+    padding: 0;
+}
+
+header{
+    display: flex;
+    grid-template-columns: 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr;
+    background-color: #FF680A;
+
+}
+
+img{
+    width: 15%;
+}
+
+button{
+    justify-items: center;
+    border-length: 15px;
+    justify-content: space-between;
+    flex: row;
+}
+
+.botoes-header{
+    justify-content: space-between;
+    align-items: center;
+}
