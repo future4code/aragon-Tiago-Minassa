@@ -1,6 +1,8 @@
 import axios from "axios";
 import { useState } from "react";
 import { useNavigate } from "react-router-dom"
+import { navigateToAdmin } from "../routes/coordinator"
+
 
 function HomePage() {
     const navigate = useNavigate();
@@ -17,12 +19,20 @@ function HomePage() {
             password: inputSenha 
         }
 
-        axios.post("https://us-central1-labenu-apis.cloudfunctions.net/labeX/:tiago/login",{
+        const url = "https://us-central1-labenu-apis.cloudfunctions.net/labeX/tiago-minassa-aragon/login"
+
+        axios.post(url, body, { 
           Headers: {
               Authorizarion: "tiago-minassa-aragon"
           }  
-        }, body).then(res => console.log(res.data))
-        .catch(error => console.log(error.reponse))
+        },)
+        .then((res) => {
+            localStorage.setItem("token", res.data.token)
+            navigateToAdmin(navigate);
+        })
+        .catch((error) => console.log(error.reponse));
+ 
+
     }
 
     return (
