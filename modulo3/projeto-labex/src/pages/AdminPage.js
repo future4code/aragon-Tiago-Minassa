@@ -1,14 +1,19 @@
 import axios from "axios";
 import { useEffect } from "react";
 import { useNavigate } from "react-router-dom"
+import { navigateToHome } from "../routes/coordinator";
 
 function AdminPage() {
     const navigate = useNavigate();
+    const token = localStorage.getItem("token")
 
     useEffect(() => {
+        if(!token) {
+            navigateToHome(navigate)
+        }
     axios.get("https://us-central1-labenu-apis.cloudfunctions.net/labeX/tiago-minassa-aragon/trip/NoIFVcOiSgTKTIPVZwXS", {
         headers:{
-            auth: localStorage.getItem("token")
+            auth: token
         }
     }).then(res => console.log(res.data))
     .catch(err => console.log(err.response))

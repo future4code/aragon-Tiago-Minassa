@@ -29,8 +29,10 @@ function HomePage() {
         .then((res) => {
             localStorage.setItem("token", res.data.token)
             navigateToAdmin(navigate);
+            alert("Acesso efetuado com sucesso!")
         })
-        .catch((error) => console.log(error.reponse));
+        .catch((error) => localStorage.setItem("token", error.reponse));
+        alert("acesso negado");
  
 
     }
