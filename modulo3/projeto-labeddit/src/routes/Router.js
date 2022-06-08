@@ -9,8 +9,8 @@ export default function Router() {
     return(
     <BrowserRouter>
     <Routes>
-        <Route index element={<LoginPage />} />
-        <Route path={"/feedPage"} element={<FeedPage />} />
+        <Route index element={<FeedPage />} />
+        <Route path={"/login"} element={<LoginPage />} />
         <Route path={"/post/:postId"} element={<PostDetailsPage />} />
         <Route path={"/signup"} element={<SignUpPage />} />
         <Route path={"*"} element={<ErrorPage />} />

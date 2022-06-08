@@ -1,3 +1,16 @@
+
+export const goToFeedPage = (navigate) => {
+    navigate("/");
+};
+
+export const goToLoginPage = (navigate) => {
+    navigate("/login");
+};
+
 export const goToSignUpPage = (navigate) => {
-    navigate("/SignUpPage")
-}
+    navigate("/signup");
+};
+
+export const goToPostDetailsPage = (navigate, postId) => {
+    navigate(`/post/${postId}`);
+};
