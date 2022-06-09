@@ -2,7 +2,7 @@ import { useNavigate } from "react-router-dom";
 import Header from '../components/Header';
 import useUnprotectedPage from "../hooks/useUnprotectedPage";
 import useForm from '../hooks/useForm';
-import { requestSignUp } from '../services/reuqests43';
+import { requestSignUp } from '../services/reuqests';
 import { goToLoginPage } from "../routes/coordinator";
 
 function SignUpPage() {
