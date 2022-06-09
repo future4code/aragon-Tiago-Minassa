@@ -8,7 +8,6 @@ export const useUnprotectedPage = () => {
 
     useEffect(() => {
         const token = localStorage.getItem("token");
-
         if (token) {
             goToFeedPage(navigate);
         };

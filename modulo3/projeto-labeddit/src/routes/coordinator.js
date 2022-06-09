@@ -8,7 +8,7 @@ export const goToLoginPage = (navigate) => {
 };
 
 export const goToSignUpPage = (navigate) => {
-    navigate("/signup");
+    navigate("/signUp");
 };
 
 export const goToPostDetailsPage = (navigate, postId) => {

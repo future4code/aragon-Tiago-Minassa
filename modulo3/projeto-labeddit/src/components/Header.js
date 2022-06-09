@@ -1,14 +1,10 @@
 import { useNavigate } from "react-router-dom";
 import { goToLoginPage } from "../routes/coordinator";
 
-// Função que renderiza condicionalmente o header de cada página.
 function Header(props) {
-    // variável navigate -> Armazena a chamada do Hook useNavigate do react-router-dom
     const navigate = useNavigate();
 
-    // Função que promove o efeito de logout do sistema
     const logout = () => {
-        // Estrutura condicional de confirmação do logout.
         if (window.confirm("Tem certeza de que deseja sair?")) {
             localStorage.removeItem("token");
             localStorage.removeItem("userEmail");
