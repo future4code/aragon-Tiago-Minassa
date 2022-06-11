@@ -2,6 +2,7 @@ import { useNavigate } from "react-router-dom";
 import { goToLoginPage } from "../routes/coordinator";
 
 function Header(props) {
+
     const navigate = useNavigate();
 
     const logout = () => {
