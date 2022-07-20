@@ -1,0 +1,32 @@
+### Ping
+GET http://localhost:3003/ping
+
+### Perfumes
+GET http://localhost:3003/perfumes
+
+PARAMS 
+ q Armani
+ sort id
+ order desc
+ limit 5
+ page 5
+
+### Create Perfume
+POST http://localhost:3003/perfumes
+
+BODY 
+{
+    "name":"Presence",
+    "brand": "Mont Blanc",
+    "price": 351.00,
+    "ml": 75
+}
+
+### Edit Perfume
+PUT http://localhost:3003/perfumes/:id
+
+BODY 
+{
+    "price": 278.00
+}
+
