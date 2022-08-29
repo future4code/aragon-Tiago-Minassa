@@ -1,0 +1,30 @@
+
+
+### Endpoint de teste
+GET http://localhost:3003/ping
+
+
+### Endpoint signup
+POST http://localhost:3003/users/signup
+Content-Type: application/json
+
+{
+    "name": "Tiago",
+    "email": "tiagolabenua@gmail.com",
+    "password": "abc123z!"
+}
+
+
+### Endpoint login
+POST http://localhost:3003/users/login
+Content-Type: application/json
+
+{
+    "email": "tiagolabenu@gmail.com",
+    "password": "abc123!"
+}
+
+
+### Endpoint get products
+GET http://localhost:3003/products
+
